@@ -1,0 +1,6 @@
+<h2>Temporizador</h2>
+<label>Defina o intervalo do temporizador:</label>
+<input #title type="number"/>
+
+{{timer.getCount()}}s
+<button (click)="timer.start(1000)">Start</button>

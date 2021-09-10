@@ -1,0 +1,14 @@
+<h2>Matérias</h2>
+<div>
+  <input #title type="text"/>
+  <button (click)="this.materias.add(title.value); title.value='';">+</button>
+
+</div>
+<ul>
+
+  <li *ngFor="let materia of this.materias.getList(), index as i">
+    {{materia.title}}
+    <span (click)="this.materias.remove(i)" style="cursor: pointer">-</span>
+  </li>
+
+</ul>
